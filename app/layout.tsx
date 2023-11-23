@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Nav from './(components)/Nav'
+import { tokens } from './(assets)/designTokens'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className={`w-[1034px] h-[836px] ${tokens.colors.bg_black_1} pt-6 pb-5 px-6 rounded-lg border-solid border ${tokens.colors.border_white}`}>
+          <div className={`w-full h-full rounded-lg border-solid border ${tokens.colors.border_white}`}>
+            <Nav />
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   )
 }
