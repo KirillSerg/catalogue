@@ -25,9 +25,9 @@ export default function RootLayout({
             ${tokens.colors.border_white} ${tokens.colors.bg_black_1}`
           }
         >
-          <div className={`w-full h-full rounded-lg border-2 ${tokens.colors.border_white}`}>
+          <div className={`flex flex-col w-full h-full rounded-lg border-2 ${tokens.colors.border_white}`}>
             <Nav />
-            <div className='w-full h-full pt-7 px-10 pb-10'>
+            <div className='w-full flex-1 pt-7 px-10 pb-10'>
               {children}
             </div>
           </div>

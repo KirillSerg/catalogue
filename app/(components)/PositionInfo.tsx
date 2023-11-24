@@ -1,6 +1,12 @@
-const PositionInfo = () => {
+interface Props {
+  className: string;
+}
+
+const PositionInfo = ({className}: Props) => {
   return (
-    <div>PositionInfo</div>
+    <section className={`${className}`}>
+      PositionInfo
+    </section>
   )
 }
 
