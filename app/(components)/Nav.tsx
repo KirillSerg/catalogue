@@ -20,7 +20,7 @@ const Nav = () => {
           )}`
         }
         href="/equipment">
-        Наборы экипировки
+        Набір екіпірування
       </Link>
       
       <Link
@@ -34,7 +34,7 @@ const Nav = () => {
         }
         href="/staff"
       >
-        Список персонала
+        Список персоналу
       </Link>
 
       <Link
@@ -48,7 +48,7 @@ const Nav = () => {
         }
         href="/"
       >
-        Должности
+        Посада
       </Link>
       
       <Link
@@ -62,7 +62,7 @@ const Nav = () => {
         }
         href="/hierarchy"
       >
-        Иерархия
+        Ієрархія
       </Link>
     </nav>
   )

@@ -4,15 +4,16 @@ import { tokens } from "../(assets)/designTokens"
 const colors = tokens.colors
 
 interface Props {
-  
+  active?: boolean;
+
 }
 
-const PositionBlock = () => {
+const PositionBlock = ({active}: Props) => {
   return (
     <div
       className={
-        `w-full h-20 flex flex-row items-center px-4 gap-4 justify-between rounded-lg
-        ${colors.bg_black_2}`
+        `w-full h-20 flex flex-row items-center px-4 gap-4 justify-between rounded-lg ${colors.bg_black_2}
+        ${active && `${colors.border_violet} border-2`}`
       }
     >
       <DotsGroup />

@@ -1,10 +1,10 @@
 interface Props {
-  className: string;
+  styles: string;
 }
 
-const PositionInfo = ({className}: Props) => {
+const PositionInfo = ({styles}: Props) => {
   return (
-    <section className={`${className}`}>
+    <section className={`${styles}`}>
       PositionInfo
     </section>
   )
