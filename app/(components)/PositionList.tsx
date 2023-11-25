@@ -10,16 +10,23 @@ interface Props {
 
 const PositionList = ({styles}: Props) => {
   return (
-    <section className={`${styles}`}>
-      <div className="flex flex-col gap-2 mb-2">
+    <section className={`${styles} flex flex-col justify-between`}>
+      <div className="max-h-[608px] overflow-y-auto scroll-smooth scrollbar [&>div+div]:mt-2">
         <PositionBlock active={true} />
+        <PositionBlock />
+        <PositionBlock />
+        <PositionBlock />
+        <PositionBlock />
+        <PositionBlock />
+        <PositionBlock />
+        <PositionBlock />
+        <PositionBlock />
         <PositionBlock />
         <PositionBlock />
       </div>
       <Button
         title="Створити нову посаду"
         btnStyles={
-          //box-shadow: 0px 4px 40px 0px rgba(104, 102, 234, 0.24);
           `${colors.bg_violet} ${colors.text_white_1} w-full py-[14px] rounded-lg border-2 ${colors.border_white_16}
           text-sm font-semibold drop-shadow-[0_4px_40px_rgba(104,102,234,0.24)]`
         }
