@@ -9,7 +9,7 @@ const Nav = () => {
   const pathname = usePathname()
 
   return (
-    <nav className={`flex flex-row-reverse justify-between ${tokens.colors.text_gray_2}`}>
+    <nav className={`flex flex-row-reverse justify-between text-base ${tokens.colors.text_gray_2}`}>
       <Link
         className={
           `[&:focus+a]:border-r-0 flex h-12 justify-center items-center basis-1/4 ${tokens.colors.border_white}

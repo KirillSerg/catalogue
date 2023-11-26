@@ -20,15 +20,24 @@ const PositionList = ({ styles, positions, activePosition, setActivePosition }: 
 
   return (
     <section className={`${styles} flex flex-col justify-between pb-4`}>
-      <div className="max-h-[608px] overflow-y-auto scroll-smooth scrollbar [&>div+div]:mt-2">
-        {!!positions.length && positions.map((position) => {
-          return <PositionBlock
-            key={position.name}
-            positionData={position}
-            setActivePosition={setActivePosition}
-            active={activePosition?.name === position.name}
-          />
-        })}
+      <div
+        className={
+          `h-[608px] overflow-y-auto scroll-smooth scrollbar [&>div+div]:mt-2
+          ${!positions.length && "flex items-center justify-center"}`
+        }
+      >
+        {
+          positions.length ? (
+            positions.map((position) => {
+              return <PositionBlock
+                key={position.name}
+                positionData={position}
+                setActivePosition={setActivePosition}
+                active={activePosition?.name === position.name}
+              />
+            })
+          ) : <p className={`text-base text-center ${tokens.colors.text_gray_2}`}>Створіть нову посаду</p>
+        }
       </div>
 
       <button
